@@ -29,7 +29,7 @@ class Aoc:
         for i in range(len(coords)):
             for x in range(len(coords)):
                 if x > i:
-                    area = abs(coords[i][0]-coords[x][0]+1)*abs(coords[i][1]-coords[x][1]+1)
+                    area = (abs(coords[i][0]-coords[x][0])+1)*(abs(coords[i][1]-coords[x][1])+1)
                     if area > top_area:
                         if self.is_inside((coords[i], coords[x]), boundaries):
                             # check if any of the rectangle sides are overlapping any other lines, except for the ones near the edges
